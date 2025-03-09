@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stycle.css">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        
+        <!-- Organization Prediction Table -->
+        <div class="result-box">
+            <h2>Organization Prediction Table</h2>
+            <table class="prediction-table">
+                <tr>
+                    <td> Department:</td>
+                    <td>{{ pred[0] }}</td>
+                </tr>
+                <tr>
+                    <td>DistanceFromHome:</td>
+                    <td>{{ pred[1] }}</td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>{{ pred[2] }}</td>
+                </tr>
+                <tr>
+                    <td>MaritalStatus:</td>
+                    <td>{{ pred[3] }}</td>
+                </tr>
+                <tr>
+                    <td>MonthlyIncome:</td>
+                    <td>{{ pred[4] }}</td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td>{{ pred[5] }}</td>
+                </tr>
+                <tr>
+                    <td>OverTime:</td>
+                    <td>{{ pred[6] }}</td>
+                </tr>
+                <tr>
+                    <td>PercentSalaryHike:</td>
+                    <td>{{ pred[7] }}</td>
+                </tr>
+                <tr>
+                    <td>WorkLifeBalance:</td>
+                    <td>{{ pred[8] }}</td>
+                </tr>
+                <tr>
+                    <td>YearsAtCompany:</td>
+                    <td>{{ pred[9] }}</td>
+                </tr>
+                <tr>
+                    <td>YearsWithCurrentManager:</td>
+                    <td>{{ pred[10] }}</td>
+                </tr>
+                <tr>
+                    <td>Prediction:</td>
+                    <td>{{ prediction[0] }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="btn">Go Back to Home</a>
+    </div>
+</body>
+</html>

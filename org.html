@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout</title>
+    <link rel="stylesheet" href="../static/css/orgstycle.css">
+</head>
+<body>
+
+   
+    <form action="{{url_for('predict')}}" method="POST">
+        <input type="hidden" name="prediction_type" value="attrition"
+            <div class="options-section"></div>
+                
+            <div>
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="Sales">Sales</option>
+                    <option value="Research & Development">Research & Development</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="distanceFromHome">Distance From Home (km):</label>
+                <input type="number" id="distanceFromHome" name="distanceFromHome" placeholder="Enter distance in km" step="0.1" min="0">
+            </div>
+
+        
+
+        
+
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+
+            
+
+            <div>
+                <label for="maritalStatus">Marital Status:</label>
+                <select id="maritalStatus" name="maritalStatus">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="monthlyIncome">Monthly Income:</label>
+                <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Enter monthly income" step="0.01" min="0">
+            </div>
+
+            <div>
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" placeholder="Enter  Age" step="1" min="18">
+            </div>
+
+            
+
+            <div>
+                <label for="overTime">OverTime:</label>
+                <select id="overTime" name="overTime">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="percentSalaryHike">Percent Salary Hike:</label>
+                <input type="number" id="percentSalaryHike" name="percentSalaryHike" placeholder="Enter salary hike percentage" step="0.01" min="0">
+            </div>
+
+            
+            <div>
+                <label for="workLifeBalance">Work Life Balance:</label>
+                <input type="number" id="workLifeBalance" name="workLifeBalance" placeholder="Enter balance level (1-5)" min="1" max="5" step="1">
+            </div>
+
+            <div>
+                <label for="yearsAtCompany">Years At Company:</label>
+                <input type="number" id="yearsAtCompany" name="yearsAtCompany" placeholder="Enter years at company" min="0" step="1">
+            </div>
+
+            
+
+            <div>
+                <label for="yearsWithCurrentManager">Years with Current Manager:</label>
+                <input type="number" id="yearsWithCurrentManager" name="yearsWithCurrentManager" placeholder="Enter years with current manager" min="0" step="1">
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

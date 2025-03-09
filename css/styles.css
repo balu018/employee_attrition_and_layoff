@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(60%); /* Darken video slightly for better contrast */
+}
+
+/* Container Styles */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Heading */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+button {
+    width: 45%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Form Container */
+#form-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+/* Hidden Form Styling */
+.hidden {
+    display: none;
+}
+
+/* Create Account Link */
+.create-account {
+    margin-top: 15px;
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+.create-account span {
+    color: #e74c3c;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.create-account span:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    input {
+        padding: 12px;
+    }
+}

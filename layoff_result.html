@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stycle.css">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        
+        <!-- Organization Prediction Table -->
+        <div class="result-box">
+            <h2>Layoff Prediction Table</h2>
+            <table class="prediction-table">
+                <tr>
+                    <td>stage:</td>
+                    <td>{{ predi[0] }}</td>
+                </tr>
+                <tr>
+                    <td>industry:</td>
+                    <td>{{ predi[1] }}</td>
+                </tr>
+                <tr>
+                    <td>country:</td>
+                    <td>{{ predi[2] }}</td>
+                </tr>
+                <tr>
+                    <td>continent:</td>
+                    <td>{{ predi[3] }}</td>
+                </tr>
+                <tr>
+                    <td>company:</td>
+                    <td>{{ predi[4] }}</td>
+                </tr>
+                <tr>
+                    <td>company size:</td>
+                    <td>{{ predi[5] }}</td>
+                </tr>
+                <tr>
+                    <td>Funds Raised:</td>
+                    <td>{{ predi[6] }}</td>
+                </tr>
+                <tr>
+                    <td>year:</td>
+                    <td>{{ predi[7] }}</td>
+                </tr>
+                <tr>
+                    <td>month:</td>
+                    <td>{{ predi[8] }}</td>
+                </tr>
+                <tr>
+                    <td>quarter:</td>
+                    <td>{{ predi[9] }}</td>
+                </tr>
+                <tr>
+                    <td>day:</td>
+                    <td>{{ predi[10] }}</td>
+                </tr>
+                <tr>
+                    <td>Prediction:</td>
+                    <td>{{ ans[0] }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="btn">Go Back to Home</a>
+    </div>
+</body>
+</html>

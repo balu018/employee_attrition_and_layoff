@@ -1,0 +1,144 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Background */
+body {
+    position: relative;
+    background-image: url('../employees-meeting.jpg'); /* Background image */
+    background-size: cover;             /* Cover the entire background */
+    background-position: center;        /* Center the image */
+    background-attachment: fixed;       /* Fixed background while scrolling */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Dark transparent overlay for the background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+   
+        background: rgba(0, 0, 0, 0.8); /* Dark transparent overlay */
+    
+     /* Dark transparent overlay */
+    z-index: -1;  /* Make sure the overlay is behind the content */
+}
+
+/* Container Styling */
+
+
+/* Result Box Styling */
+.result-box {
+    background: rgba(255, 255, 255, 0.1);  /* Light transparency for smoky effect */
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px); /* Optional: Slight blur for added effect */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Modern and clean */
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+/* Table Styling */
+.result-box h2 {
+    font-size: 28px;
+    color: #32CD32; /* Lime Green for table title */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Table Styles */
+.prediction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+     /* Rounded corners for the table */
+}
+
+.prediction-table td {
+    padding: 15px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2); /* Light semi-transparent background */
+    color: #333333;
+    transition: background-color 0.3s ease;
+}
+
+.prediction-table td:first-child {
+    font-weight: bold;
+    color: white; /* OrangeRed for labels */
+}
+
+.prediction-table td:last-child {
+    color: white; /* DodgerBlue for values */
+}
+
+/* Hover Effects */
+.prediction-table td:hover {
+    background-color: rgba(255, 165, 0, 0.4); /* Orange hover effect */
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background-color: #FF6347; /* Tomato color on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .result-box {
+        font-size: 16px;
+    }
+
+    .prediction-table td {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}

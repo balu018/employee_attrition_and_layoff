@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/empstycle.css') }}">
+</head>
+<body>
+    
+    <form action="{{ url_for('predict') }}" method="POST">
+        <h2>Enter Details to Predict Layoff</h2>
+	<input type="hidden" name="prediction_type" value="layoff">
+        <!-- Dropdown for Stage -->
+        <label for="stage">Stage:</label>
+        <select name="stage" id="stage">
+            {% for stage in stages %}
+                <option value="{{ stage }}">{{ stage }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Dropdown for Industry -->
+        <label for="industry">Industry:</label>
+        <select name="industry" id="industry">
+            {% for industry in industries %}
+                <option value="{{ industry }}">{{ industry }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Dropdown for Country -->
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Dropdown for Continent -->
+        <label for="continent">Continent:</label>
+        <select name="continent" id="continent">
+            {% for continent in continents %}
+                <option value="{{ continent }}">{{ continent }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Dropdown for Company -->
+        <label for="company">Company:</label>
+        <select name="company" id="company">
+            {% for company in companies %}
+                <option value="{{ company }}">{{ company }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Numeric Input for Funds Raised -->
+	<label for="company_size">Company Size:</label>
+        <input type="number" id="company_size" name="company_size" required><br><br>
+
+        <label for="funds_raised">Funds Raised (in $ million):</label>
+        <input type="number" id="funds_raised" name="funds_raised" required><br><br>
+
+        <!-- Numeric Input for Laid Off Count -->
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required><br><br>
+	
+	<label for="month" >Month:</label>
+        <input type="number" id="month" name="month" min=1 max=12 required><br><br>
+
+	<label for="quarter">Quarter:</label>
+        <input type="number" id="quarter" name="quarter" min=1 max=4 required><br><br>
+
+	<label for="day">Day:</label>
+        <input type="number" id="day" name="day" min=1 max=31 required><br><br>
+
+	
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
