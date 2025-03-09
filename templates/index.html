@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portal</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="../static/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <h1>Company Portal</h1>
+        <div class="button-container">
+            <button id="organizationBtn">Organization</button>
+            <button id="employeeBtn">Employee</button>
+        </div>
+        
+        <div id="form-container">
+            <!-- Organization Forms -->
+            <input type="hidden" name="role" value="Organization">
+                <form id="organizationSignUpForm" class="hidden">
+                    <h2>Organization Sign Up</h2>
+                    <input type="text" placeholder="Organization Name" required>
+                    <input type="email" placeholder="Organization Email" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <form id="organizationLoginForm" class="hidden">
+                    <h2>Organization Login</h2>
+                    <input type="email" placeholder="Organization Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p class="create-account" id="orgCreateAccount">If you don't have an account -> <span>Create Account</span></p>
+                </form>
+            </div>
+
+            <!-- Employee Forms -->
+            <input type="hidden" name="role" value="employee">
+                <form id="employeeSignUpForm" class="hidden">
+                    <h2>Employee Sign Up</h2>
+                    <input type="text" placeholder="Employee Name" required>
+                    <input type="email" placeholder="Employee Email" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <form id="employeeLoginForm" class="hidden">
+                    <h2>Employee Login</h2>
+                    <input type="email" placeholder="Employee Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p class="create-account" id="empCreateAccount">If you don't have an account -> <span>Create Account</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
